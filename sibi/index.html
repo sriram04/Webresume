@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>
+Resume
+</title>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+function genPDF()
+{
+        var doc = new jsPDF();
+        var elementHTML = $('#html').html();
+       
+        doc.fromHTML(elementHTML, 15, 15, {
+        'width': 170,
+         
+         });
+
+        doc.save('SriramResume.pdf');
+}
+</script>
+</head>
+<body>
+    <div id = "html">
+<p><center><font size="4" color="red"> <u><b>RESUME</b> </u></center></p>
+<p><font size="4" color="black"><u><b> Name: </b> </u> &nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp<em>P SRIRAM REDDY </em></p>
+<hr>
+<p><font size="4" color="red"> Education: </p>
+<p> <font size="4" color="black"><u><b> Qualification: </b> </u> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <em>  Btech in CSE From VIT-AP - 85%. <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Intermediate in Narayana Institutions - 97%. <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 10th in Loyola Public School - 90%</em></p>
+<hr>
+<p><font size="4" color="red">Skillset: </p>
+<p> <font size="4" color="black"><u><b>Languages:</b> </u> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp<em> Java,C++,Html,Css,Java Script ,Python,PHP,C</em></p>
+<hr>
+<p> <font size="4" color="black"><u><b>Projects done: </b> </u> <p> <em>1.Home Automation using aurdino </em> <br> <em>2.Wrieless Drone using raspberry pi 3 </em>  <br> <em>3.Fire fighter using raspberry pi 3</em>
+<hr>
+<p><font size="4" color="red"> Personal Information: </p>
+<p> <font size="4" color="black"> <em>   <u><b>Age</u></b>&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbspnineteen </em> <br>  <em><u><b> Gender </u></b>&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbspMale </em> <br>  <em><u><b>Email</u></b>&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbspsriramreddy.pidaparthi@vitap.ac.in </em><br><em><u><b>Contact</u></b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp7095122112.</em> <br> <em><u><b>Address</u></b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Brundavan colony,tirumula towers appartment 3rd line Guntur Dist.-522007.</em></p>
+<hr>
+<p><font size="4" color="red"> Declaration : </p>
+<p> <font size="4" color="black"> <em>  I hereby declare that the information furnished above is true to the best of my knowledge. I do hereby declare that above particulars of information and facts stated are true, correct and complete to the best of my knowledge and belief.</em>  </p>
+</div>
+ <hr>
+<button onClick="genPDF()">Download Pdf</button>
+</body>
+</head>
+</html>
